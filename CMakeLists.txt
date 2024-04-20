@@ -83,6 +83,7 @@ option(GGML_FMA                     "ggml: enable FMA"                          
 if (NOT MSVC)
     option(GGML_F16C                "ggml: enable F16C"                                    ON)
 endif()
+option(GGML_SSE3                     "ggml: enable SSE3 on Windows(just for test)"         OFF)
 
 #set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -ffast-math")
 #set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -march=native")
