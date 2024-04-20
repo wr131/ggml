@@ -109,6 +109,7 @@ else()
     elseif (MINGW)
         if (GGML_SSE3)
             set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -msse3")
+		endif()
     else()
         set(CMAKE_C_FLAGS  "${CMAKE_C_FLAGS} -mfma -mf16c -mavx -mavx2")
         
