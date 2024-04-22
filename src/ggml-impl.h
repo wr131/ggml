@@ -42,6 +42,18 @@ extern "C" {
 #endif
 #endif
 
+#if defined(_MSC_VER) && defined(GGML_SSE3)
+#ifndef __SSE3__
+#define __SSE3__
+#endif
+#endif
+
+#if (defined(_MINGW32_) || defined(_MINGW64_)) && defined(GGML_SSE3)
+#ifndef __SSE3__
+#define __SSE3__
+#endif
+#endif
+
 // 16-bit float
 // on Arm, we use __fp16
 // on x86, we use uint16_t
